@@ -28,5 +28,5 @@ to change how empty grid tracks are handled */
 
 /* Three column grid layout */
 .grid[data-layout="thirds"] {
-  --grid-min-item-size: clamp(16rem, 33%, 20rem);
+  --grid-min-item-size: clamp(19.5rem, 33%, 20rem);
 }

@@ -7,6 +7,7 @@
 @import "/src/css/compositions/grid.css";
 @import "/src/css/compositions/repel.css";
 @import "/src/css/compositions/cluster.css";
+@import "/src/css/compositions/flow.css";
 
 @import "/src/css/blocks/select.css";
 @import "/src/css/blocks/card.css";
