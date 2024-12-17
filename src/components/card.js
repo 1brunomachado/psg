@@ -15,7 +15,7 @@ export function cardCourse(item) {
   const requirements = document.createElement("div");
   const enroll = getEnrollButton(item);
 
-  setAttributes(image, { src: item.img, alt: item.name, width: 384, height: 256.15 });
+  setAttributes(image, { src: item.img, alt: item.name, width: 384, height: 256.15, loading: "lazy" });
   school.textContent = item.city;
   dates.textContent = getEnrollStatus(item);
   schedule.textContent = "Cronograma";
