@@ -1,8 +1,7 @@
 .button {
   --button-padding: 0.75em;
-  --button-border: 1px solid var(--button-bg);
+  --button-border: 1px solid var(--button-border-color);
   --button-radius: 0.5em;
-  --button-pointer: pointer;
 
   display: flex;
   justify-content: center;
@@ -17,40 +16,46 @@
   background: var(--button-bg);
   border: var(--button-border);
   border-radius: var(--button-radius);
-  cursor: var(--button-pointer);
+  cursor: pointer;
   transition: var(--transition-fade);
 }
 
 .button:hover {
   color: var(--button-hover-color);
   background: var(--button-hover-bg);
+  border-color: var(--button-hover-border);
+}
+
+.button:disabled {
+  pointer-events: none;
 }
 
 .button[data-button="cancelled"] {
   --button-color: var(--neutral-100);
   --button-bg: var(--red-400);
+  --button-border-color: var(--red-400);
   --button-hover-color: var(--red-400);
   --button-hover-bg: var(--neutral-100);
 }
 
 .button[data-button="classifieds"] {
-  --button-color: var(--orange-500);
-  --button-bg: var(--neutral-100);
-  --button-hover-color: var(--neutral-100);
-  --button-hover-bg: var(--orange-500);
+  --button-color: var(--neutral-100);
+  --button-bg: var(--orange-500);
+  --button-border-color: var(--orange-500);
+  --button-hover-color: var(--orange-500);
+  --button-hover-bg: var(--neutral-100);
 }
 
 .button[data-button="soon"] {
   --button-color: var(--orange-500);
   --button-bg: var(--neutral-100);
-  --button-hover-color: var(--orange-500);
-  --button-hover-bg: var(--neutral-100);
-  --button-pointer: default;
+  --button-border-color: var(--orange-200);
 }
 
 .button[data-button="open"] {
   --button-color: var(--neutral-100);
   --button-bg: var(--orange-500);
+  --button-border-color: var(--orange-500);
   --button-hover-color: var(--orange-500);
   --button-hover-bg: var(--neutral-100);
 }
@@ -58,7 +63,5 @@
 .button[data-button="close"] {
   --button-color: var(--red-400);
   --button-bg: var(--neutral-100);
-  --button-hover-color: var(--red-400);
-  --button-hover-bg: var(--neutral-100);
-  --button-pointer: default;
+  --button-border-color: var(--red-200);
 }

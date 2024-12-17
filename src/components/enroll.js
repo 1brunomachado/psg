@@ -2,34 +2,12 @@ import { createButton } from "./card.js";
 import { formatDate } from "./utils.js";
 
 // Definição dos status de inscrição
-export const isCanceled = (cancellation) => ({
-  tag: "a",
-  cls: "button",
-  attr: {
-    href: cancellation,
-    target: "_blank",
-    "data-button": "cancelled",
-  },
-  text: "Comunicado de cancelamento",
-});
-
-export const hasCandidates = (classifieds) => ({
-  tag: "a",
-  cls: "button",
-  attr: {
-    href: classifieds,
-    target: "_blank",
-    "data-button": "classifieds",
-  },
-  text: "Lista de selecionados",
-});
-
 export const soonEnroll = {
-  tag: "div",
+  tag: "button",
   cls: "button",
   attr: {
     "data-button": "soon",
-    disabled: true,
+    disabled: "",
   },
   text: "Inscrições em breve",
 };
@@ -44,14 +22,36 @@ export const openEnroll = {
 };
 
 export const closeEnroll = {
-  tag: "div",
+  tag: "button",
   cls: "button",
   attr: {
     "data-button": "close",
-    disabled: true,
+    disabled: "",
   },
   text: "Inscrições encerradas",
 };
+
+export const hasCandidates = (classifieds) => ({
+  tag: "a",
+  cls: "button",
+  attr: {
+    href: classifieds,
+    target: "_blank",
+    "data-button": "classifieds",
+  },
+  text: "Lista de selecionados",
+});
+
+export const isCanceled = (cancellation) => ({
+  tag: "a",
+  cls: "button",
+  attr: {
+    href: cancellation,
+    target: "_blank",
+    "data-button": "cancelled",
+  },
+  text: "Comunicado de cancelamento",
+});
 
 // Verifica o status de inscrição
 export function isEnrollSoon(startEnroll) {
