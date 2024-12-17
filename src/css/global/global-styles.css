@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size-adjust: from-font;
+  line-height: var(--leading-standard);
+}
+
+:is(h1, h2, h3, h4) {
+  line-height: var(--leading-fine);
+  text-wrap: balance;
+}
+
+h1 {
+  max-width: 20ch;
+  font-size: var(--size-step-6);
+}
+
+h2 {
+  max-width: 35ch;
+  font-size: var(--size-step-5);
+}
+
+h3 {
+  max-width: 35ch;
+  font-size: var(--size-step-4);
+}
+
+:is(h4, h5, h6) {
+  font-size: var(--size-step-3);
+}
+
+small {
+  font-size: var(--size-step-0);
+}
+
+ul:not([class]) {
+  padding-inline-start: 1.7ch;
+  list-style-type: disc;
+}
+
+ul:not([class]) > li {
+  padding-inline-start: var(--space-xs);
+}
+
+ul ::marker {
+  font-size: 0.8lh;
+}
+
+:is(video, iframe[src*="youtube"], iframe[src*="vimeo"]) {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a:not([class]):hover {
+  text-underline-offset: 0.2lh;
+}
+
+:is(h1, h2, h3, h4) a:not([class]) {
+  text-decoration-thickness: 0.1ex;
+  text-underline-offset: 0.2ex;
+}
+
+:is(h1, h2, h3, h4) a:not([class]):hover {
+  text-underline-offset: 0.3ex;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 1px solid var(--blue-300, currentColor);
+  outline-offset: var(--focus-offset, 0.2lh);
+}
+
+@supports (-moz-appearance: none) {
+  :root {
+    --focus-offset: 0.08em;
+  }
+}
+
+:target {
+  scroll-margin-block: 5lh;
+}
+
+::selection {
+  color: var(--color-dark);
+  background: var(--color-light);
+}
+
+hr {
+  margin-block: var(--flow-space, var(--space-xl));
+  border: none;
+  border-block-start: var(--stroke);
+}
+
+svg:not([class]) {
+  width: auto;
+  height: 1lh;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+svg[role="img"][width][height] {
+  width: revert;
+  height: revert;
+}
+
+:is(input:not([type="checkbox"], [type="radio"], [type="color"]), select, textarea) {
+  width: 100%;
+  padding: 1em 1em 1em 3em;
+  color: var(--neutral-400);
+  background: transparent;
+  border-radius: var(--radius-m);
+  border: var(--stroke-solid);
+  cursor: pointer;
+  appearance: none;
+
+  &::placeholder {
+    color: var(--neutral-400);
+    opacity: 1;
+  }
+}
+
+summary {
+  font-weight: var(--font-bold);
+  cursor: pointer;
+}
+
+details[open] summary {
+  margin-block-end: var(--space-s);
+}

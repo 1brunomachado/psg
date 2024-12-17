@@ -1,0 +1,33 @@
+label::before,
+label::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+label::before {
+  left: 1rem;
+}
+
+label::after {
+  right: 0.75rem;
+  background-image: url("../../images/filter-drop.svg");
+}
+
+[data-label="status"]::before {
+  background-image: url("../../images/filter-status.svg");
+}
+
+[data-label="city"]::before {
+  background-image: url("../../images/filter-city.svg");
+}
+
+[data-label="category"]::before {
+  background-image: url("../../images/filter-category.svg");
+}
+
+select {
+  position: relative;
+  z-index: 100;
+}

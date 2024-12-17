@@ -1,0 +1,36 @@
+:root {
+  --blue-200: #00509566;
+  --blue-300: #1e90ff;
+  --blue-400: #005095;
+  --blue-500: #003180;
+  --green-200: #77d10066;
+  --green-400: #77d100;
+  --neutral-100: #ffffff;
+  --neutral-200: #b1b1b1;
+  --neutral-400: #495057;
+  --neutral-900: #000000;
+  --orange-200: #f4661066;
+  --orange-400: #f7941d;
+  --orange-500: #f46610;
+  --red-200: #dc354564;
+  --red-400: #dc3545;
+
+  --font-base: "Roboto Flex", sans-serif;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi: 600;
+  --leading-micro: 0.85;
+  --leading-flat: 1;
+  --leading-fine: 1.2;
+  --leading-standard: 1.4;
+  --uppercase-kerning: 0.04ch;
+
+  --gutter: clamp(1.25rem, 0.9821rem + 1.3393vw, 2rem);
+
+  --stroke-width: 1px;
+  --stroke-solid: var(--stroke-width) solid var(--neutral-200);
+  --radius-s: 0.25rem;
+  --radius-m: 0.5rem;
+
+  --transition-fade: 300ms ease;
+}
