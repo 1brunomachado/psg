@@ -8,18 +8,23 @@ export function cardCourse(item) {
   const image = document.createElement("img");
   const content = document.createElement("div");
   const badges = createBadges([item.category, "Presencial", `${item.vacancies} vagas`, item.shift]);
-  const school = document.createElement("h3");
   const info = document.createElement("div");
+  const school = document.createElement("h3");
   const dates = document.createElement("p");
-  const schedule = document.createElement("div");
-  const requirements = document.createElement("div");
+  const requirements = document.createElement("a");
+  const schedule = document.createElement("a");
   const enroll = getEnrollButton(item);
 
+  setAttributes(card, { "data-course": `${formatCategoryClass(item.category)}` });
   setAttributes(image, { src: item.img, alt: item.name, width: 650, height: 406.25, loading: "lazy" });
+  content.className = "flow";
+  info.className = "flow info";
   school.textContent = item.city;
   dates.textContent = getEnrollStatus(item);
-  schedule.textContent = "Cronograma";
+  setAttributes(requirements, { class: "cluster link", role: "button", tabindex: "0" });
   requirements.textContent = "Requisitos básicos";
+  setAttributes(schedule, { class: "cluster link", role: "button", tabindex: "0" });
+  schedule.textContent = "Cronograma";
 
   openModal(requirements, "requirements", item.requirements);
   openModal(schedule, "schedule", item);
@@ -28,8 +33,8 @@ export function cardCourse(item) {
     openModal(enroll, "enroll");
   }
 
-  info.append(dates, requirements, schedule);
-  content.append(badges, school, info, enroll);
+  info.append(school, dates, requirements, schedule);
+  content.append(badges, info, enroll);
   card.append(image, content);
   cards.append(card);
 }
@@ -53,7 +58,7 @@ function createBadges(arr) {
 
   arr.forEach((text) => {
     const badge = document.createElement("div");
-    setAttributes(badge, { class: "badge", "data-badge": `${formatCategoryClass(arr[0])}` });
+    badge.className = "badge";
     badge.textContent = text;
     group.appendChild(badge);
   });

@@ -12,28 +12,30 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div class="wrapper grid" data-layout="thirds">
-      <label class="repel" for="status" data-label="status">
-        <select id="status" aria-label="Selecione o status das inscrições">
-          <option value="open">Inscrições abertas</option>
-          <option value="closed">Inscrições encerradas</option>
-        </select>
-      </label>
+    <main class="wrapper">
+      <div class="grid" data-layout="thirds">
+        <label class="repel" for="status" data-label="status">
+          <select id="status" aria-label="Selecione o status das inscrições">
+            <option value="open">Inscrições abertas</option>
+            <option value="closed">Inscrições encerradas</option>
+          </select>
+        </label>
 
-      <label class="repel" for="city" data-label="city">
-        <select id="city" aria-label="Selecione a cidade">
-          <option value="">Cidade</option>
-        </select>
-      </label>
+        <label class="repel" for="city" data-label="city">
+          <select id="city" aria-label="Selecione a cidade">
+            <option value="">Cidade</option>
+          </select>
+        </label>
 
-      <label class="repel" for="category" data-label="category">
-        <select id="category" aria-label="Selecione a categoria do curso">
-          <option value="">Categoria</option>
-        </select>
-      </label>
-    </div>
+        <label class="repel" for="category" data-label="category">
+          <select id="category" aria-label="Selecione a categoria do curso">
+            <option value="">Categoria</option>
+          </select>
+        </label>
+      </div>
 
-    <div class="wrapper grid cards" data-layout="thirds"></div>
+      <div class="grid cards" data-layout="thirds"></div>
+    </main>
 
     <script type="module" src="src/main.js"></script>
   </body>

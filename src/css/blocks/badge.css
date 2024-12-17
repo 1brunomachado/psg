@@ -1,3 +1,28 @@
 .badges {
   --gutter: 0.5rem;
 }
+
+.badge {
+  padding: 0.25em 0.6em;
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+  line-height: 1;
+  color: var(--badge-color);
+  border: 1px solid var(--badge-border);
+  border-radius: var(--radius-s);
+}
+
+[data-course="free"] .badge {
+  --badge-color: var(--orange-500);
+  --badge-border: var(--orange-200);
+}
+
+[data-course="technical"] .badge {
+  --badge-color: var(--blue-400);
+  --badge-border: var(--blue-200);
+}
+
+[data-course="rsti"] .badge {
+  --badge-color: var(--green-400);
+  --badge-border: var(--green-200);
+}
