@@ -22,10 +22,10 @@
   background-image: url(../../images/external_free.svg);
 }
 
-[data-course="free"] .link::after {
-  background-image: url(../../images/external_free.svg);
+[data-course="technical"] .link::after {
+  background-image: url(../../images/external_technical.svg);
 }
 
-[data-course="free"] .link::after {
-  background-image: url(../../images/external_free.svg);
+[data-course="rsti"] .link::after {
+  background-image: url(../../images/external_rsti.svg);
 }
