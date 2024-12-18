@@ -16,7 +16,7 @@ export function cardCourse(item) {
   const enroll = getEnrollButton(item);
 
   setAttributes(card, { "data-course": `${formatCategoryClass(item.category)}` });
-  setAttributes(image, { src: item.img, alt: item.name, width: 650, height: 406.25, loading: "lazy" });
+  setAttributes(image, { src: item.img, alt: item.name, width: 650, height: 406.25 });
   content.className = "flow";
   info.className = "flow info";
   school.textContent = item.city;
