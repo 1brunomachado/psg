@@ -1,29 +1,29 @@
 .button {
-  --button-padding: 0.75em;
-  --button-border: 1px solid var(--button-border-color);
-  --button-radius: 0.5em;
+  --padding: 0.75em;
+  --border: 1px solid var(--border-color);
+  --radius: 0.5em;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--button-padding);
+  padding: var(--padding);
   width: 100%;
-  font-size: var(--button-font-size, 1em);
-  font-weight: var(--button-font-weight, 600);
+  font-size: var(--font-size, 1em);
+  font-weight: var(--font-weight, 600);
   line-height: 1.1;
   text-decoration: none;
-  color: var(--button-color);
-  background: var(--button-bg);
-  border: var(--button-border);
-  border-radius: var(--button-radius);
+  color: var(--color);
+  background: var(--bg);
+  border: var(--border);
+  border-radius: var(--radius);
   cursor: pointer;
   transition: var(--transition-fade);
 }
 
 .button:hover {
-  color: var(--button-hover-color);
-  background: var(--button-hover-bg);
-  border-color: var(--button-hover-border);
+  color: var(--hover-color);
+  background: var(--hover-bg);
+  border-color: var(--hover-border);
 }
 
 .button:disabled {
@@ -31,37 +31,37 @@
 }
 
 .button[data-button="cancelled"] {
-  --button-color: var(--neutral-100);
-  --button-bg: var(--red-400);
-  --button-border-color: var(--red-400);
-  --button-hover-color: var(--red-400);
-  --button-hover-bg: var(--neutral-100);
+  --color: var(--color-light);
+  --bg: hsl(var(--color-alert));
+  --border-color: hsl(var(--color-alert));
+  --hover-color: hsl(var(--color-alert));
+  --hover-bg: var(--color-light);
 }
 
 .button[data-button="classifieds"] {
-  --button-color: var(--neutral-100);
-  --button-bg: var(--orange-500);
-  --button-border-color: var(--orange-500);
-  --button-hover-color: var(--orange-500);
-  --button-hover-bg: var(--neutral-100);
+  --color: var(--color-light);
+  --bg: hsl(var(--color-free));
+  --border-color: hsl(var(--color-free));
+  --hover-color: hsl(var(--color-free));
+  --hover-bg: var(--color-light);
 }
 
 .button[data-button="soon"] {
-  --button-color: var(--orange-500);
-  --button-bg: var(--neutral-100);
-  --button-border-color: var(--orange-200);
+  --color: hsl(var(--color-free));
+  --bg: var(--color-light);
+  --border-color: hsla(var(--color-free) / var(--color-opacity));
 }
 
 .button[data-button="open"] {
-  --button-color: var(--neutral-100);
-  --button-bg: var(--orange-500);
-  --button-border-color: var(--orange-500);
-  --button-hover-color: var(--orange-500);
-  --button-hover-bg: var(--neutral-100);
+  --color: var(--color-light);
+  --bg: hsl(var(--color-free));
+  --border-color: hsl(var(--color-free));
+  --hover-color: hsl(var(--color-free));
+  --hover-bg: var(--color-light);
 }
 
 .button[data-button="close"] {
-  --button-color: var(--red-400);
-  --button-bg: var(--neutral-100);
-  --button-border-color: var(--red-200);
+  --color: hsl(var(--color-alert));
+  --bg: var(--color-light);
+  --border-color: hsla(var(--color-alert) / var(--color-opacity));
 }

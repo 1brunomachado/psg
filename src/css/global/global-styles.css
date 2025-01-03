@@ -119,7 +119,7 @@ svg[role="img"][width][height] {
 :is(input:not([type="checkbox"], [type="radio"], [type="color"]), select, textarea) {
   width: 100%;
   padding: 1em 1em 1em 3em;
-  color: var(--neutral-400);
+  color: var(--color-text);
   background: transparent;
   border-radius: var(--radius-m);
   border: var(--stroke-solid);

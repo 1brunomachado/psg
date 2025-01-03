@@ -13,16 +13,16 @@
 }
 
 [data-course="free"] .badge {
-  --badge-color: var(--orange-500);
-  --badge-border: var(--orange-200);
+  --badge-color: var(--color-free);
+  --badge-border: var(--color-free);
 }
 
 [data-course="technical"] .badge {
-  --badge-color: var(--blue-400);
-  --badge-border: var(--blue-200);
+  --badge-color: var(--color-technical);
+  --badge-border: var(--color-technical);
 }
 
 [data-course="rsti"] .badge {
-  --badge-color: var(--green-400);
-  --badge-border: var(--green-200);
+  --badge-color: var(--color-rsti);
+  --badge-border: var(--color-rsti);
 }

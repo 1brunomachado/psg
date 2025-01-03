@@ -1,19 +1,14 @@
 :root {
-  --blue-200: #00509566;
-  --blue-300: #1e90ff;
-  --blue-400: #005095;
-  --blue-500: #003180;
-  --green-200: #77d10066;
-  --green-400: #77d100;
-  --neutral-100: #ffffff;
-  --neutral-200: #b1b1b1;
-  --neutral-400: #495057;
-  --neutral-900: #000000;
-  --orange-200: #f4661066;
-  --orange-400: #f7941d;
-  --orange-500: #f46610;
-  --red-200: #dc354564;
-  --red-400: #dc3545;
+  --color-brand: hsl(33 93 54);
+  --color-title: hsl(217 100 25);
+  --color-dark: hsl(0 0 0);
+  --color-light: hsl(0 0 100);
+  --color-text: hsl(210 9 31);
+  --color-border: hsl(0 0 69);
+  --color-alert: hsl(354 70 54);
+  --color-free: hsl(23 91 51);
+  --color-technical: hsl(208 100 29);
+  --color-rsti: hsl(86 100 41);
 
   --font-base: "Roboto Flex", sans-serif;
   --font-regular: 400;
@@ -28,7 +23,7 @@
   --gutter: clamp(1.25rem, 0.9821rem + 1.3393vw, 2rem);
 
   --stroke-width: 1px;
-  --stroke-solid: var(--stroke-width) solid var(--neutral-200);
+  --stroke-solid: var(--stroke-width) solid var(--color-border);
   --radius-s: 0.25rem;
   --radius-m: 0.5rem;
 
