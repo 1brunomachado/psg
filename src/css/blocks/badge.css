@@ -1,28 +1,28 @@
 .badges {
-  --gutter: 0.5rem;
+  --gutter: var(--size-8);
 }
 
 .badge {
-  padding: 0.25em 0.6em;
-  font-size: 0.75rem;
-  font-weight: var(--font-medium);
-  line-height: 1;
+  padding: var(--size-4) var(--size-8);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semi);
+  line-height: var(--leading-flat);
   color: var(--badge-color);
-  border: 1px solid var(--badge-border);
-  border-radius: var(--radius-s);
+  background-color: var(--badge-bg);
+  border-radius: var(--radius-sm);
 }
 
 [data-course="free"] .badge {
-  --badge-color: var(--color-free);
-  --badge-border: var(--color-free);
+  --badge-color: hsla(var(--color-orange) / 1);
+  --badge-bg: hsla(var(--color-orange) / 0.05);
 }
 
 [data-course="technical"] .badge {
-  --badge-color: var(--color-technical);
-  --badge-border: var(--color-technical);
+  --badge-color: hsla(var(--color-blue) / 1);
+  --badge-bg: hsla(var(--color-blue) / 0.05);
 }
 
 [data-course="rsti"] .badge {
-  --badge-color: var(--color-rsti);
-  --badge-border: var(--color-rsti);
+  --badge-color: hsla(var(--color-green) / 1);
+  --badge-bg: hsla(var(--color-green) / 0.05);
 }

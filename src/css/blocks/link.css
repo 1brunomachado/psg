@@ -1,12 +1,12 @@
 .link {
-  --gutter: 0.25em;
-  color: var(--neutral-400);
+  --gutter: var(--size-4);
+  color: hsla(var(--color-text) / 1);
   cursor: pointer;
   transition: var(--transition-fade) color;
 }
 
 .link:hover {
-  color: var(--neutral-900);
+  color: hsla(var(--color-black) / 1);
 }
 
 .link::after {

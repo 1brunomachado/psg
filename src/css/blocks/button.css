@@ -1,67 +1,53 @@
 .button {
-  --padding: 0.75em;
-  --border: 1px solid var(--border-color);
-  --radius: 0.5em;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--padding);
   width: 100%;
-  font-size: var(--font-size, 1em);
-  font-weight: var(--font-weight, 600);
-  line-height: 1.1;
+  padding: var(--size-12);
+  font-size: var(--text-base);
+  font-weight: var(--font-semi);
+  line-height: var(--leading-flat);
   text-decoration: none;
-  color: var(--color);
-  background: var(--bg);
-  border: var(--border);
-  border-radius: var(--radius);
+  color: var(--button-color);
+  background: var(--button-bg);
+  border: 1px solid var(--button-border, var(--button-bg));
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition: var(--transition-fade);
 }
 
 .button:hover {
-  color: var(--hover-color);
-  background: var(--hover-bg);
-  border-color: var(--hover-border);
+  opacity: 0.8;
 }
 
 .button:disabled {
   pointer-events: none;
-}
-
-.button[data-button="cancelled"] {
-  --color: var(--color-light);
-  --bg: hsl(var(--color-alert));
-  --border-color: hsl(var(--color-alert));
-  --hover-color: hsl(var(--color-alert));
-  --hover-bg: var(--color-light);
-}
-
-.button[data-button="classifieds"] {
-  --color: var(--color-light);
-  --bg: hsl(var(--color-free));
-  --border-color: hsl(var(--color-free));
-  --hover-color: hsl(var(--color-free));
-  --hover-bg: var(--color-light);
+  opacity: 0.8;
 }
 
 .button[data-button="soon"] {
-  --color: hsl(var(--color-free));
-  --bg: var(--color-light);
-  --border-color: hsla(var(--color-free) / var(--color-opacity));
+  --button-color: hsla(var(--color-orange) / 1);
+  --button-bg: hsla(var(--color-white) / 1);
+  --button-border: hsla(var(--color-orange) / 0.2);
 }
 
 .button[data-button="open"] {
-  --color: var(--color-light);
-  --bg: hsl(var(--color-free));
-  --border-color: hsl(var(--color-free));
-  --hover-color: hsl(var(--color-free));
-  --hover-bg: var(--color-light);
+  --button-color: hsla(var(--color-white) / 1);
+  --button-bg: hsla(var(--color-orange) / 1);
 }
 
 .button[data-button="close"] {
-  --color: hsl(var(--color-alert));
-  --bg: var(--color-light);
-  --border-color: hsla(var(--color-alert) / var(--color-opacity));
+  --button-color: hsla(var(--color-red) / 1);
+  --button-bg: hsla(var(--color-white) / 1);
+  --button-border: hsla(var(--color-red) / 0.2);
+}
+
+.button[data-button="classifieds"] {
+  --button-color: hsla(var(--color-white) / 1);
+  --button-bg: hsla(var(--color-orange) / 1);
+}
+
+.button[data-button="cancelled"] {
+  --button-color: hsla(var(--color-white) / 1);
+  --button-bg: hsla(var(--color-red) / 1);
 }

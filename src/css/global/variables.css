@@ -1,16 +1,28 @@
 :root {
-  --color-brand: hsl(33 93 54);
-  --color-title: hsl(217 100 25);
-  --color-dark: hsl(0 0 0);
-  --color-light: hsl(0 0 100);
-  --color-text: hsl(210 9 31);
-  --color-border: hsl(0 0 69);
-  --color-alert: hsl(354 70 54);
-  --color-free: hsl(23 91 51);
-  --color-technical: hsl(208 100 29);
-  --color-rsti: hsl(86 100 41);
-
+  --color-white: 0 0 100;
+  --color-border: 204 5 79;
+  --color-text: 210 9 31;
+  --color-black: 210 8 9;
+  --color-sky: 217 100 25;
+  --color-blue: 208 100 29;
+  --color-green: 86 100 41;
+  --color-amber: 33 93 54;
+  --color-orange: 23 91 51;
+  --color-red: 0 83 57;
+  --color-link: 210 100 56;
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-12: 0.75rem;
+  --size-16: 1rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --gutter: clamp(1.25rem, 0.354rem + 2.6549vw, 2rem);
   --font-base: "Roboto Flex", sans-serif;
+  --text-sm: var(--size-12);
+  --text-base: var(--size-16);
+  --text-lg: var(--size-20);
   --font-regular: 400;
   --font-medium: 500;
   --font-semi: 600;
@@ -19,13 +31,10 @@
   --leading-fine: 1.2;
   --leading-standard: 1.4;
   --uppercase-kerning: 0.04ch;
-
-  --gutter: clamp(1.25rem, 0.9821rem + 1.3393vw, 2rem);
-
-  --stroke-width: 1px;
-  --stroke-solid: var(--stroke-width) solid var(--color-border);
-  --radius-s: 0.25rem;
-  --radius-m: 0.5rem;
-
+  --stroke-solid: 1px solid hsla(var(--color-border) / 1);
+  --radius-sm: var(--size-4);
+  --radius-md: var(--size-8);
+  --shadow: 0 0 0 1px rgba(13, 63, 126, 0.05), 0 1px 1px -0.5px rgba(42, 51, 69, 0.05),
+    0 1px 3px -1.5px rgba(42, 51, 70, 0.05), 0 3px 6px -3px rgba(42, 51, 70, 0.05);
   --transition-fade: 300ms ease;
 }

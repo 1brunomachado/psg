@@ -2,16 +2,16 @@ label::before,
 label::after {
   content: "";
   position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: var(--size-24);
+  height: var(--size-24);
 }
 
 label::before {
-  left: 1rem;
+  left: var(--size-16);
 }
 
 label::after {
-  right: 0.75rem;
+  right: var(--size-12);
   background-image: url("../../images/filter-drop.svg");
 }
 

@@ -77,7 +77,7 @@ a:not([class]):hover {
 }
 
 :focus-visible {
-  outline: 1px solid var(--blue-300, currentColor);
+  outline: 1px solid hsl(var(--color-link, currentColor));
   outline-offset: var(--focus-offset, 0.2lh);
 }
 
@@ -121,7 +121,7 @@ svg[role="img"][width][height] {
   padding: 1em 1em 1em 3em;
   color: var(--color-text);
   background: transparent;
-  border-radius: var(--radius-m);
+  border-radius: var(--radius-md);
   border: var(--stroke-solid);
   cursor: pointer;
   appearance: none;
